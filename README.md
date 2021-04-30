@@ -1,6 +1,6 @@
 # TwitterAnalyze
 
-Esse projeto  a api do twitter e a NaturalLanguage do google.
+Esse projeto utiliza a api do twitter e a NaturalLanguage do google.
 Para rodar local precisa configurar a api key no arquivo "keys.properties":
 LANGUAGE_API_KEY = ""
 TWITTER_API_KEY = "" (começa com Bearer)
