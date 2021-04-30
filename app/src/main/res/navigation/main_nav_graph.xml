@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/twitterListFragment">
+
+    <fragment
+        android:id="@+id/twitterListFragment"
+        android:name="com.example.twitteranalyzer.twitter.TwitterListFragment"
+        android:label="fragment_twitter_list"
+        tools:layout="@layout/fragment_twitter_list" >
+        <action
+            android:id="@+id/action_showAnalyzerFrament"
+            app:destination="@id/twitterAnalyzeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twitterAnalyzeFragment"
+        android:name="com.example.twitteranalyzer.twitteranalyze.TwitterAnalyzeFragment"
+        android:label="TwitterAnalyzeFragment" >
+        <argument
+            android:name="tweet"
+            app:argType="com.example.twitteranalyzer.network.TwitterModel" />
+    </fragment>
+</navigation>
