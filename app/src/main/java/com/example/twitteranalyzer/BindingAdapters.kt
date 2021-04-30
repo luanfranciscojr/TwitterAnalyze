@@ -33,32 +33,6 @@ fun bindStatus(progressBar: ProgressBar, status: ApiStatus?) {
 }
 
 @BindingAdapter("tweetSentiment")
-fun bindTweetSentiment(imageView: ImageView, analyzeSentiment: AnalyzeSentiment?) {
-    val context = imageView.context
-    analyzeSentiment?.apply {
-        if (documentSentiment.score > 0.1) {
-            imageView.setImageDrawable(
-                    ContextCompat.getDrawable(
-                            context,
-                            R.drawable.ic_android_happy
-                    )
-            )
-        } else {
-            if (documentSentiment.score < 0.1) {
-                imageView.setImageDrawable(
-                        ContextCompat.getDrawable(
-                                context,
-                                R.drawable.ic_android_sad
-                        )
-                )
-            } else {
-                imageView.setImageDrawable(
-                        ContextCompat.getDrawable(
-                                context,
-                                R.drawable.ic_android_normal
-                        )
-                )
-            }
-        }
-    }
+fun bindTweetSentiment(imageView: ImageView, resourceSentiment: Int) {
+        imageView.setImageResource(resourceSentiment)
 }

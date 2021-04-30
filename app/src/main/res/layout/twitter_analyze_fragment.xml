@@ -58,7 +58,7 @@
                 android:adjustViewBounds="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/content"
-                app:tweetSentiment="@{viewModel.tweetSentiment}" />
+                app:tweetSentiment="@{viewModel.displaySentiment}" />
 
             <ProgressBar
                 android:id="@+id/status_loading_wheel"
