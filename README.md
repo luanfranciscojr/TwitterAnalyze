@@ -8,4 +8,5 @@ TWITTER_API_KEY = "" (Precisa iniciar com Bearer)
 
 O projeto utiliza koin( framework de injeção de dependencia). 
 Escolhi o koin por ser mais simples de configurar que o Dagger2(levando em conta o tempo que eu tinha para o desenvolvimento do projeto)
+
 A arquitetura utilizada foi "MVVM".
