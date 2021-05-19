@@ -6,6 +6,6 @@ import retrofit2.http.Query
 interface TwitterApi {
 
     @GET("search/recent?expansions=author_id&user.fields=name")
-    suspend fun getPictureOfDay(@Query("query") userName: String): TwitterList
+    suspend fun getTwitters(@Query("query") userName: String): TwitterList
 
 }
