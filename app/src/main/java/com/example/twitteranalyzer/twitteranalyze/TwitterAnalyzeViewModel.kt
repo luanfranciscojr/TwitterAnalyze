@@ -27,7 +27,9 @@ class TwitterAnalyzeViewModel(var repository: NaturalLanguageRepository) : ViewM
         viewModelScope.launch {
             try {
                 tweetSentiment.value = repository.getTweetSentiment(tweet)
+                status.value = ApiStatus.DONE
             } catch (e: Exception) {
+                status.value = ApiStatus.ERROR
             }
         }
     }
