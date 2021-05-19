@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 
 class TwitterAnalyzeViewModel(var repository: NaturalLanguageRepository) : ViewModel() {
 
+    val status = MutableLiveData<ApiStatus>(ApiStatus.LOADING)
     var tweetSentiment = MutableLiveData<AnalyzeSentiment>()
     var  displaySentiment: LiveData<Int> = map(tweetSentiment) {
            when(it.documentSentiment.score){
@@ -21,7 +22,6 @@ class TwitterAnalyzeViewModel(var repository: NaturalLanguageRepository) : ViewM
            }
 
     }
-    val status = MutableLiveData<ApiStatus>(ApiStatus.LOADING)
 
     fun getTweetSentiment(tweet: TwitterModel) {
         viewModelScope.launch {
