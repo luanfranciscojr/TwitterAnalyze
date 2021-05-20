@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.onStart
 
-@ExperimentalCoroutinesApi
 fun SearchView.doOnQueryTextChanged(): Flow<CharSequence?> {
     return callbackFlow<CharSequence?> {
         val listener = object : SearchView.OnQueryTextListener {
